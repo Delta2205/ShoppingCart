@@ -1,16 +1,15 @@
 import { Products } from './components/Products'
 import { products as initialProducts } from './mocks/products.json'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { Header } from './components/Header.jsx'
+import { Footer } from './components/Footer.jsx'
+import { IS_DEVELOPMENT } from './config.js'
+import { FiltersContext } from './context/filters.jsx'
+
+function useFilters(){
 
 
-function App() {
-  const [products] = useState(initialProducts)
-  const [filters, setFilters] = useState({
-    category: "all",
-    minPrice: 0
-  })
-
+  const {filters,setFilters} = useContext(FiltersContext)
 
   // Sistema para filtrar los productos
   const filterProducts = (products) => {
@@ -22,13 +21,19 @@ function App() {
       )
     })
   }
+  return {filterProducts, setFilters, filters}
+}
 
+function App() {
+  const [products] = useState(initialProducts)
+  const {filterProducts,setFilters,filters} = useFilters()
   //Llamado al sistema  
   const filteredProducts = filterProducts(products)
   return (
     <>
         <Header changeFilters={setFilters}/>
         <Products products={filteredProducts} />
+       {IS_DEVELOPMENT && <Footer filters={filters}/>}
 
     </>
   )
