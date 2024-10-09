@@ -13,7 +13,10 @@ export function Footer () {
       {/* {
         JSON.stringify(cart,null,2)
       } */}
-      <h4>Prueba técnica de React ⚛️ － <span>@midudev</span></h4>
+      <u>
+      <h4>Estimado usuario esta carrito de compras fue hecho con un json pro lo que las imagenes no cargan mil disculpas</h4>
+      </u>
+      <h4>hecha con React⚛️ － <span>@deltacode</span></h4>
       <h5>Shopping Cart con useContext & useReducer</h5>
     </footer>
   )
