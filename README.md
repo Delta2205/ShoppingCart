@@ -12,7 +12,7 @@ Esta aplicación simula un carrito de compras, donde los usuarios pueden agregar
 
 ## Tecnologías Utilizadas
 - **Frontend:** React
-- **Estado:** `useState`, `useEffect`,`useContext`,
+- **Estado:** `useState`, `useEffect`,`useContext`,`useReducer`
 
 ## Capturas de Pantalla
 ![image](https://github.com/user-attachments/assets/959d7e1d-6dca-4e0a-bef1-dfaec39392b0)
