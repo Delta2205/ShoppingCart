@@ -18,5 +18,3 @@ Esta aplicación simula un carrito de compras, donde los usuarios pueden agregar
 ![image](https://github.com/user-attachments/assets/959d7e1d-6dca-4e0a-bef1-dfaec39392b0)
 
 
-## Licencia
-Este proyecto está bajo la licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
